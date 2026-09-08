@@ -1,15 +1,87 @@
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<html lang="tr">
 	<head>
-		<title>Generic - Editorial by HTML5 UP</title>
+		<title>Kaynak Detayı — Jeoloji.org</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.rozet {
+				display: inline-block;
+				font-size: 0.7em;
+				font-weight: 700;
+				padding: 3px 9px;
+				border-radius: 3px;
+				margin-right: 6px;
+				vertical-align: middle;
+				text-transform: uppercase;
+				letter-spacing: 0.05em;
+			}
+			.rozet-dergipark    { background: #1a73e8; color: #fff; }
+			.rozet-uluslararasi { background: #34a853; color: #fff; }
+			.rozet-tez          { background: #f57c00; color: #fff; }
+
+			.il-etiketi {
+				display: inline-block;
+				font-size: 0.75em;
+				background: #f0f0f0;
+				border: 1px solid #ccc;
+				border-radius: 10px;
+				padding: 2px 10px;
+				margin: 3px 3px 0 0;
+				color: #555;
+			}
+
+			.meta-tablo {
+				width: 100%;
+				border-collapse: collapse;
+				margin: 1.5em 0;
+				font-size: 0.9em;
+			}
+			.meta-tablo td {
+				padding: 6px 10px;
+				border-bottom: 1px solid #eee;
+			}
+			.meta-tablo td:first-child {
+				font-weight: 600;
+				color: #777;
+				width: 140px;
+				white-space: nowrap;
+			}
+
+			.ozet-kutu {
+				background: #f8f8f8;
+				border-left: 4px solid #e64980;
+				padding: 1em 1.2em;
+				margin: 1.5em 0;
+				font-style: italic;
+				color: #444;
+				border-radius: 0 4px 4px 0;
+			}
+
+			.adsense-placeholder {
+				background: #f5f5f5;
+				border: 1px dashed #ccc;
+				text-align: center;
+				color: #aaa;
+				font-size: 0.75em;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.adsense-728x90  { width: 100%; height: 90px; margin: 1em 0; }
+			.adsense-300x250 { width: 100%; height: 250px; margin: 1em 0; }
+
+			#deprem-listesi { list-style:none; padding:0; margin:0; }
+			#deprem-listesi li { border-bottom:1px solid #eee; padding:5px 0; display:flex; justify-content:space-between; align-items:center; }
+			.dep-mag { font-weight:700; min-width:36px; text-align:center; border-radius:3px; padding:1px 5px; color:#fff; font-size:0.9em; }
+			.mag-kucuk { background:#4caf50; }
+			.mag-orta  { background:#ff9800; }
+			.mag-buyuk { background:#f44336; }
+			.dep-yer   { flex:1; padding:0 8px; font-size:0.85em; }
+			.dep-sure  { color:#999; font-size:0.8em; white-space:nowrap; }
+			#deprem-guncelleme { font-size:0.75em; color:#999; margin-top:5px; }
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -22,45 +94,89 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="index.html" class="logo"><strong>Editorial</strong> by HTML5 UP</a>
+									<a href="index.html" class="logo"><strong>Jeoloji.org</strong> &mdash; Türkiye Yer Bilimleri</a>
 									<ul class="icons">
 										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
 										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
 									</ul>
 								</header>
 
-							<!-- Content -->
+							<!-- AdSense — Header altı -->
+							<div class="adsense-placeholder adsense-728x90">Reklam Alanı 728×90</div>
+
+							<!-- İçerik -->
 								<section>
 									<header class="main">
-										<h1>Generic</h1>
+										<p style="margin-bottom:0.3em">
+											<a href="kaynaklar.html">&larr; Kaynaklar</a>
+										</p>
+										<h1 id="kaynak-baslik">
+											<span class="rozet rozet-dergipark" id="kaynak-rozet">DergiPark</span>
+											İzmir Körfezi Fay Sistemi ve Depremselliği
+										</h1>
 									</header>
 
-									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+									<!-- Meta bilgiler -->
+									<table class="meta-tablo">
+										<tr><td>Yazarlar</td><td id="kaynak-yazarlar">Ahmet Yılmaz, Mehmet Demir, Fatma Kaya</td></tr>
+										<tr><td>Kurum</td><td id="kaynak-kurum">Dokuz Eylül Üniversitesi</td></tr>
+										<tr><td>Dergi / Kaynak</td><td id="kaynak-dergi">Jeoloji Mühendisliği Dergisi</td></tr>
+										<tr><td>Yıl</td><td id="kaynak-yil">2023</td></tr>
+										<tr><td>DOI</td><td id="kaynak-doi"><a href="#" target="_blank" rel="noopener">10.xxxx/xxxxx</a></td></tr>
+										<tr><td>İller</td>
+											<td id="kaynak-iller">
+												<span class="il-etiketi">İzmir</span>
+											</td>
+										</tr>
+										<tr><td>Anahtar Kelimeler</td><td id="kaynak-keywords">fay, sismoloji, İzmir Körfezi, tektonik, depremsellik</td></tr>
+									</table>
 
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+									<!-- Özet -->
+									<h2>Özet</h2>
+									<div class="ozet-kutu" id="kaynak-ozet">
+										Bu çalışmada İzmir Körfezi'nin tektonik yapısı ve körfez boyunca konumlanan
+										fay segmentlerinin depremsellik potansiyeli incelenmektedir. Sismik yansıma
+										profilleri ve GPS verileri kullanılarak fay geometrisi üç boyutlu olarak
+										modellenmiştir. Sonuçlar, körfezdeki normal faylanmanın güncel aktivitesini
+										ortaya koymakta ve bölge için deprem tehlike değerlendirmesine katkı sağlamaktadır.
+									</div>
 
 									<hr class="major" />
 
-									<h2>Interdum sed dapibus</h2>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+									<!-- AdSense — Makale içi -->
+									<div class="adsense-placeholder adsense-728x90">Reklam Alanı 728×90</div>
+
+									<!-- Orijinal Kaynak -->
+									<h2>Orijinal Kaynağa Erişim</h2>
+									<p>
+										Bu sayfa, akademik çalışmanın bibliyografik bilgilerini ve özetini içermektedir.
+										Tam metne erişmek için aşağıdaki bağlantıyı kullanın:
+									</p>
+									<ul class="actions">
+										<li><a href="#" class="button primary" id="kaynak-url" target="_blank" rel="noopener">Tam Metni Görüntüle &rarr;</a></li>
+									</ul>
+									<p style="font-size:0.85em;color:#888;">
+										Kaynak: Jeoloji.org, akademik çalışmaların içeriğini barındırmaz; yalnızca
+										açık erişimli bibliyografik veri sağlar. Telif hakkı ilgili yayınevine aittir.
+									</p>
 
 									<hr class="major" />
 
-									<h2>Magna etiam veroeros</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-
-									<hr class="major" />
-
-									<h2>Lorem aliquam bibendum</h2>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+									<!-- İlgili Kaynaklar -->
+									<h2>Benzer Kaynaklar</h2>
+									<div class="posts" id="benzer-kaynaklar">
+										<article>
+											<h3><span class="rozet rozet-uluslararasi">Uluslararası</span>Ege Graben Sistemi ve Uzanım Tektoniği</h3>
+											<p>2022 &bull; İzmir, Aydın</p>
+											<ul class="actions"><li><a href="#" class="button small">Detay</a></li></ul>
+										</article>
+										<article>
+											<h3><span class="rozet rozet-tez">Tez</span>İzmir Körfezi Zemin Amplifikasyonu</h3>
+											<p>2021 &bull; İzmir</p>
+											<ul class="actions"><li><a href="#" class="button small">Detay</a></li></ul>
+										</article>
+									</div>
 
 								</section>
 
@@ -71,89 +187,70 @@
 					<div id="sidebar">
 						<div class="inner">
 
-							<!-- Search -->
+							<!-- Arama -->
 								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
+									<form method="get" action="kaynaklar.html">
+										<input type="text" name="q" id="query" placeholder="Kaynak ara..." />
 									</form>
 								</section>
 
-							<!-- Menu -->
+							<!-- Menü -->
 								<nav id="menu">
 									<header class="major">
-										<h2>Menu</h2>
+										<h2>Menü</h2>
 									</header>
 									<ul>
-										<li><a href="index.html">Homepage</a></li>
-										<li><a href="generic.html">Generic</a></li>
-										<li><a href="elements.html">Elements</a></li>
+										<li><a href="index.html">Ana Sayfa</a></li>
+										<li><a href="depremler.html">Canlı Deprem Haritası</a></li>
+										<li><a href="kaynaklar.html">Akademik Kaynaklar</a></li>
 										<li>
-											<span class="opener">Submenu</span>
+											<span class="opener">İllere Göre</span>
 											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												<li><a href="#">Ipsum Adipiscing</a></li>
-												<li><a href="#">Tempus Magna</a></li>
-												<li><a href="#">Feugiat Veroeros</a></li>
+												<li><a href="kaynaklar.html?il=İstanbul">İstanbul</a></li>
+												<li><a href="kaynaklar.html?il=İzmir">İzmir</a></li>
+												<li><a href="kaynaklar.html?il=Ankara">Ankara</a></li>
+												<li><a href="kaynaklar.html?il=Kahramanmaraş">Kahramanmaraş</a></li>
+												<li><a href="iller.html">Tüm İller →</a></li>
 											</ul>
 										</li>
-										<li><a href="#">Etiam Dolore</a></li>
-										<li><a href="#">Adipiscing</a></li>
 										<li>
-											<span class="opener">Another Submenu</span>
+											<span class="opener">Disiplinler</span>
 											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												<li><a href="#">Ipsum Adipiscing</a></li>
-												<li><a href="#">Tempus Magna</a></li>
-												<li><a href="#">Feugiat Veroeros</a></li>
+												<li><a href="kaynaklar.html?konu=jeoloji">Jeoloji</a></li>
+												<li><a href="kaynaklar.html?konu=deprem">Deprem / Sismoloji</a></li>
+												<li><a href="kaynaklar.html?konu=hidrojeoloji">Hidrojeoloji</a></li>
+												<li><a href="kaynaklar.html?konu=jeoteknik">Jeoteknik</a></li>
+												<li><a href="kaynaklar.html?konu=paleontoloji">Paleontoloji</a></li>
 											</ul>
 										</li>
-										<li><a href="#">Maximus Erat</a></li>
-										<li><a href="#">Sapien Mauris</a></li>
-										<li><a href="#">Amet Lacinia</a></li>
+										<li><a href="harita.html">Jeoloji Haritaları</a></li>
+										<li><a href="hakkinda.html">Hakkında</a></li>
 									</ul>
 								</nav>
 
-							<!-- Section -->
+							<!-- Son Depremler -->
 								<section>
 									<header class="major">
-										<h2>Ante interdum</h2>
+										<h2>Son Depremler</h2>
 									</header>
-									<div class="mini-posts">
-										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-									</div>
+									<ul id="deprem-listesi">
+										<li><span class="dep-mag mag-kucuk">—</span><span class="dep-yer">Yükleniyor...</span></li>
+									</ul>
+									<p id="deprem-guncelleme"></p>
 									<ul class="actions">
-										<li><a href="#" class="button">More</a></li>
+										<li><a href="depremler.html" class="button small">Haritayı Gör</a></li>
 									</ul>
 								</section>
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Get in touch</h2>
-									</header>
-									<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-										<li class="icon solid fa-phone">(000) 000-0000</li>
-										<li class="icon solid fa-home">1234 Somewhere Road #8254<br />
-										Nashville, TN 00000-0000</li>
-									</ul>
-								</section>
+							<!-- AdSense -->
+							<div class="adsense-placeholder adsense-300x250">Reklam Alanı 300×250</div>
 
 							<!-- Footer -->
 								<footer id="footer">
-									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+									<p class="copyright">
+										&copy; Jeoloji.org 2024.
+										Tasarım: <a href="https://html5up.net">HTML5 UP</a> (CCA 3.0).
+									</p>
 								</footer>
 
 						</div>
@@ -167,6 +264,40 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				(function() {
+					var liste = document.getElementById('deprem-listesi');
+					var guncelleme = document.getElementById('deprem-guncelleme');
+
+					function magClass(m) {
+						if (m >= 4.0) return 'mag-buyuk';
+						if (m >= 2.5) return 'mag-orta';
+						return 'mag-kucuk';
+					}
+					function sureFarki(zaman) {
+						var fark = Math.floor((Date.now() - zaman) / 60000);
+						if (fark < 60) return fark + ' dk önce';
+						return Math.floor(fark / 60) + ' sa önce';
+					}
+
+					fetch('https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&minlatitude=35&maxlatitude=43&minlongitude=25&maxlongitude=45&minmagnitude=1.5&orderby=time&limit=7')
+						.then(function(r) { return r.json(); })
+						.then(function(data) {
+							liste.innerHTML = '';
+							data.features.forEach(function(f) {
+								var mag = f.properties.mag || 0;
+								var yer = (f.properties.place || 'Türkiye').replace(/^\d+ km [A-Z]+ of /, '');
+								var li = document.createElement('li');
+								li.innerHTML = '<span class="dep-mag ' + magClass(mag) + '">' + mag.toFixed(1) + '</span>' +
+									'<span class="dep-yer">' + yer + '</span>' +
+									'<span class="dep-sure">' + sureFarki(f.properties.time) + '</span>';
+								liste.appendChild(li);
+							});
+							guncelleme.textContent = 'Son güncelleme: ' + new Date().toLocaleTimeString('tr-TR');
+						})
+						.catch(function() { guncelleme.textContent = 'Veri alınamadı.'; });
+				})();
+			</script>
 
 	</body>
 </html>
